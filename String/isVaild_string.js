@@ -5,7 +5,7 @@
 // Space Complexity: O(n)
 // Author: Amit Kumar
 
-function isVaild(str){
+function isValid(str){
     let stack =[]
     for(let i=0;i<str.length;i++){
         let ch = str[i]
@@ -22,4 +22,12 @@ function isVaild(str){
     
    return stack.length === 0;
 }
-console.log(isVaild("([{}])"))
+// ✅ Test cases
+console.log(isValid("()"));        // true
+console.log(isValid("([{}])"));    // true
+console.log(isValid("{[()]}"));    // true
+
+console.log(isValid("(]"));        // false
+console.log(isValid("([)]"));      // false
+console.log(isValid("((("));       // false
+console.log(isValid(""));          // true

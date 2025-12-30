@@ -2,12 +2,7 @@ const express = require('express')
 const mongoose = require("mongoose")
 
 let app = express()
-// mongoose.connect("mongodb+srv://amitwebappmate:0Se8d8R2tmJ95a0J@cluster0.lj3fcrs.mongodb.net/mydb").then(() =>{
-//         console.log("Connected to MongoDB")
-//     }).catch((err) =>{
-//         console.log("Error connecting to MongoDB", err)
-//     })
-const conn = mongoose.createConnection('mongodb+srv://amitwebappmate:0Se8d8R2tmJ95a0J@cluster0.lj3fcrs.mongodb.net/mydb ');
+
 
 conn.on('connected', () => console.log('connected'));
 conn.on('open', () => console.log('open'));
